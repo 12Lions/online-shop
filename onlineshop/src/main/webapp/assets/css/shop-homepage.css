@@ -4,8 +4,13 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
 
+html{ 
+	height:100%;		 /*me*/
+}
+
 body {
   padding-top: 54px;
+  height:100%;  		/*me*/
 }
 
 @media (min-width: 992px) {
@@ -13,3 +18,23 @@ body {
     padding-top: 56px;
   }
 }
+
+/*
+   My custom style
+*/
+ .wrapper{
+  	min-height: 100%;
+  	position: relative;
+ }
+
+ .content{
+ 	padding-bottom: 60px; 
+ 	
+ }
+
+.footer{
+ 	position: absolute;
+ 	width: 100%;
+ 	bottom: 0;
+ 	height: 60px;
+ }
