@@ -3,9 +3,9 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<spring:url var="css" value="resources/css" />
-<spring:url var="js" value="resources/js" />
-<spring:url var="images" value="resources/images" />
+<spring:url var="css" value="/resources/css" />
+<spring:url var="js" value="/resources/js" />
+<spring:url var="images" value="/resources/images" />
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
@@ -47,21 +47,28 @@
 		<!-- Page Content -->
 		<div class="content">
 			
-			<!-- Loading -->
+			<!-- Loading le home -->
 			<c:if test="${userClickHome == true}">
-				<%@include file="./home.jsp"%>
+				<%@include file="home.jsp"%>
 			</c:if>
 
 
 			<!-- Chargement si l'utilisateur clique sur A Propos -->
 			<c:if test="${userClickAbout == true}">
-				<%@include file="./about.jsp"%>
+				<%@include file="about.jsp"%>
 			</c:if>
 
 			<!-- Chargement si l'utilisateur clique sur Contact -->
 			<c:if test="${userClickContact == true}">
-				<%@include file="./contact.jsp"%>
+				<%@include file="contact.jsp"%>
 			</c:if>
+			
+			<!-- Chargement si l'utilisateur clique sur voir tous les produits ou sur une categorie de produits -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
+				
 			
 		</div>
 
