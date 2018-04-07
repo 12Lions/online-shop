@@ -13,8 +13,8 @@
    
    ">
 
-	<context:component-scan base-package="cm.tke.onlineshop.controller" />
-	<context:component-scan base-package="cm.tke.onlineshopbackend.daoimpl" />
+	<context:component-scan base-package="cm.tke.onlineshop" />
+	<context:component-scan base-package="cm.tke.onlineshopbackend" />
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

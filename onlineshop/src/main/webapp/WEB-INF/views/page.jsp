@@ -20,10 +20,11 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Online-Shop - ${title}</title>
+<title>Kamer-Shop Online - ${title}</title>
 
 <script>
 	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}';
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -31,6 +32,9 @@
 
 <!-- Bootstrap Pulse Theme -->
 <link href="${css}/theme-site.css" rel="stylesheet">
+
+<!-- Bootstrap dataTable CSS -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/shop-homepage.css" rel="stylesheet">
@@ -68,7 +72,10 @@
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 			
-				
+			<!-- Chargement si l'utilisateur clique sur voir la description d'un produit -->
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>	
 			
 		</div>
 
@@ -77,13 +84,20 @@
 		<%@include file="./includes/footer.jsp"%>
 
 		<!-- jQuery  -->
-		<script src="${js}/jquery.min.js"></script>
+		<script src="${js}/jquery.js"></script>
 
 		<!-- Bootstrap core JavaScript -->
-		<script src="${js}/bootstrap.bundle.min.js"></script>
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- jquery.dataTables -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- Bootstrap dataTables -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
 
 		<!-- My custom js file -->
-		<script src="${js}/custom.js"></script>
+		<script src="${js}/myapp.js"></script>
+		
 	</div>
 
 
